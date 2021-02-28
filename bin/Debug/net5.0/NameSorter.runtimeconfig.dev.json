@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/zarekchung/.dotnet/store/|arch|/|tfm|",
+      "/Users/zarekchung/.nuget/packages"
+    ]
+  }
+}

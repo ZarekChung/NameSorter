@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{DBAD5518-3347-4626-B72E-FAD6618E12BB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FileHelper.cs">
+    <Files>
+      <File FileName="Program.cs" Line="4" Column="21" />
+      <File FileName="FileHelper.cs" Line="11" Column="10" />
+      <File FileName="Name.cs" />
+      <File FileName="NameSoterHelper.cs" Line="22" Column="20" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NameSorter" expanded="True">
+            <Node name="NameSorter" expanded="True">
+              <Node name="FileHelper.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.NameSorter PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
