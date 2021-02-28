@@ -2,25 +2,28 @@ using System.IO;
 using System.Collections.Generic;
 using System;
 
-namespace NameSorter
+namespace NameSorter.UtilityHelpers
 {
     class FileHelper
     {
-        private string _filePath = string.Empty;
-        public FileHelper(string filePath)
+        private string _unsortedFile = string.Empty;
+        private string _sortedFile = string.Empty;
+
+        public FileHelper(string unsortedFile, string _sortedFile)
         {
-            this._filePath = filePath;
+            this._unsortedFile = unsortedFile;
+            this._sortedFile  = _sortedFile;
         }
 
-        public string[] getFileContent()
+        public string[] ReadFileContent()
         {
             string[] strFileContent = null;
             try
             {
-                if (string.IsNullOrEmpty(_filePath))
+                if (string.IsNullOrEmpty(_unsortedFile))
                     return strFileContent;
 
-                strFileContent = File.ReadAllLines(_filePath);
+                strFileContent = File.ReadAllLines(_unsortedFile);
                 return strFileContent;
             }
             catch (Exception ex)
@@ -29,12 +32,12 @@ namespace NameSorter
                 return strFileContent;
             }
         }
-        public bool writeFile(List<string> content)
+        public bool WriteFile(List<string> content)
         {
             try
             {
-                if (!string.IsNullOrEmpty(_filePath))
-                    File.WriteAllLines(_filePath, content);
+                if (!string.IsNullOrEmpty(_sortedFile))
+                    File.WriteAllLines(_sortedFile, content);
                 return true;
             }
             catch (Exception ex)
@@ -44,10 +47,9 @@ namespace NameSorter
             }
 
         }
-
-        public void printFileContent()
+        public void PrintFileContent()
         {
-            string[] strNameArray = getFileContent();
+            string[] strNameArray = File.ReadAllLines(_sortedFile);
             foreach (string strName in strNameArray)
             {
                 Console.WriteLine(strName);

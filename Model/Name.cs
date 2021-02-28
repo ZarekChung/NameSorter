@@ -1,4 +1,4 @@
-namespace NameSorter
+namespace NameSorter.Model
 {
     class Name{
         public string firstName { get; set; }

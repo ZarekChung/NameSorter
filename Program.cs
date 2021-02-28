@@ -1,37 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using NameSorter.UtilityHelpers;
 namespace NameSorter
 {
     class Program
     {
-        private static readonly string filePath = "unsorted-names-list.txt";
+        private static readonly string unsortedFile = "unsorted-names-list.txt";
+        private static readonly string sortedfile = "sorted-names-list.txt";
+
         static void Main(string[] args)
         {
-           execute();
-           Console.WriteLine("NameSorter has completed");
+            Execute();
+            Console.WriteLine("NameSorter has completed");
 
         }
-        private static void execute(){
+        private static void Execute()
+        {
             Console.WriteLine("start running NameSorter");
 
-            FileHelper fileHelper = new FileHelper(filePath);
+            FileHelper fileHelper = new FileHelper(unsortedFile,sortedfile);
 
-            string[] strNameArray = fileHelper.getFileContent();
-            if(strNameArray ==null || strNameArray.Length == 0){
+            string[] strNameArray = fileHelper.ReadFileContent();
+            if (strNameArray == null || strNameArray.Length == 0)
+            {
                 Console.WriteLine("Cannot find the file or there is no record in file");
                 return;
-            } 
+            }
 
-            NameSoterHelper nameSoterHelper = new NameSoterHelper();
+            NameSorterHelper nameSoterHelper = new NameSorterHelper();
             List<string> sortedNameList = nameSoterHelper.excute(strNameArray);
-            bool result = fileHelper.writeFile(sortedNameList);
-            if(result){
+            if(sortedNameList.Count == 0)
+            {
+                Console.WriteLine("There is no record in sorted list. Please check the file.");
+                return; 
+            }
+            
+            bool result = fileHelper.WriteFile(sortedNameList);
+            if (result)
+            {
                 Console.WriteLine();
-                fileHelper.printFileContent();
+                fileHelper.PrintFileContent();
                 Console.WriteLine();
             }
         }
-        
+
     }
 }
