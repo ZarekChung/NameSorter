@@ -27,7 +27,7 @@ namespace NameSorter
             }
 
             NameSorterHelper nameSoterHelper = new NameSorterHelper();
-            List<string> sortedNameList = nameSoterHelper.excute(strNameArray);
+            List<string> sortedNameList = nameSoterHelper.Excute(strNameArray);
             if(sortedNameList.Count == 0)
             {
                 Console.WriteLine("There is no record in sorted list. Please check the file.");

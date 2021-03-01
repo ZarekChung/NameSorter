@@ -8,7 +8,7 @@ namespace NameSorter.UtilityHelpers
 {
     class NameSorterHelper
     {
-        public List<string> excute(string[] strNameArray)
+        public List<string> Excute(string[] strNameArray)
         {
             Console.WriteLine("start handling Name list in NameSorterHelper");
             List<Name> nameSortedList = GetNameSortedList(strNameArray);

@@ -1,11 +1,8 @@
 ﻿<Properties StartupConfiguration="{DBAD5518-3347-4626-B72E-FAD6618E12BB}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="11" Column="23" />
-      <File FileName="FileHelper.cs" Line="18" Column="16" />
-      <File FileName="Name.cs" />
-      <File FileName="NameSoterHelper.cs" Line="21" Column="35" />
-      <File FileName="unsorted-names-list.txt" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="4" Column="21" />
+      <File FileName="unsorted-names-list.txt" Line="11" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
