@@ -7,7 +7,6 @@ namespace NameSorter
     {
         private static readonly string unsortedFile = "unsorted-names-list.txt";
         private static readonly string sortedfile = "sorted-names-list.txt";
-
         static void Main(string[] args)
         {
             Execute();

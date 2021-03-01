@@ -20,7 +20,7 @@ namespace NameSorter.UtilityHelpers
             string[] strFileContent = null;
             try
             {
-                if (string.IsNullOrEmpty(_unsortedFile))
+                if (isFileNameEmpty(_unsortedFile))
                     return strFileContent;
 
                 strFileContent = File.ReadAllLines(_unsortedFile);
@@ -36,8 +36,10 @@ namespace NameSorter.UtilityHelpers
         {
             try
             {
-                if (!string.IsNullOrEmpty(_sortedFile))
-                    File.WriteAllLines(_sortedFile, content);
+                if (isFileNameEmpty(_sortedFile))
+                    return false;
+
+                File.WriteAllLines(_sortedFile, content);
                 return true;
             }
             catch (Exception ex)
@@ -49,12 +51,21 @@ namespace NameSorter.UtilityHelpers
         }
         public void PrintFileContent()
         {
+            if(isFileNameEmpty(_sortedFile))
+                return;
+
             string[] strNameArray = File.ReadAllLines(_sortedFile);
             foreach (string strName in strNameArray)
             {
                 Console.WriteLine(strName);
             }
 
+        }
+        private bool isFileNameEmpty(string sFileName){
+            if(string.IsNullOrEmpty(sFileName)){
+                Console.WriteLine("Cannot find the file, please check the file name, fileName : " + sFileName);
+            }
+            return string.IsNullOrEmpty(sFileName);
         }
     }
 }
